@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Logo from '../../Logo/Logo.jsx';
 import Selected from '../SelectedCatogery/Selected.jsx';
 import navLinks from '../SidebarLinks/NavLinks.js';
+import { Link } from 'react-router-dom';
 
 function Sidebar({ togled, setTogled }) {
     const [select, setSelect] = useState("");
@@ -66,6 +67,8 @@ function Sidebar({ togled, setTogled }) {
                         ))}
                     </div>
                     <div className='flex justify-center items-center w-full h-20 p-4'>
+                        <Link to='/contact'>
+                        
                         <button className="inline-flex items-center text-lg font-serif py-3 px-6 rounded-full focus:outline-none transition-all duration-300 ease-in-out 
                             bg-gradient-to-r from-blue-500 to-blue-700 text-white hover:from-blue-600 hover:to-blue-800 shadow-lg hover:shadow-xl transform hover:scale-105">
                             Contact Us
@@ -81,6 +84,7 @@ function Sidebar({ togled, setTogled }) {
                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                             </svg>
                         </button>
+                        </Link>
                     </div>
                 </div>
                 <Selected select={select} datas={data} setTogled={setTogled} setSelect={setSelect} />
