@@ -14,7 +14,7 @@ const useFetchPage = (page) => {
     const fetchPageData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`https://solocorp-backend.onrender.com/api/data/${page}`);
+        const response = await axios.get(`https://solocorp-backend.onrender.com/data/${page}`);
         
         if (response.status === 200 && !response.data.message) {
           setData(response.data);
