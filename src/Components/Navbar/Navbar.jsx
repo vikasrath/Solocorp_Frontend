@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Sidebar from './Sidebar/Sidebar';
 import Logo from '../Logo/Logo';
 import HoverBox from './HoverBox/Hoverbox';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import navLinks from './SidebarLinks/NavLinks';
 import { FaBars } from 'react-icons/fa';
 
