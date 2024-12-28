@@ -42,19 +42,56 @@ function Herosection() {
     }, 5000);
     return () => clearInterval(interval);
   }, [currentHeadingIndex]);
+
   const topSearches = [
-    "Private Limited Company Registration",
-    "Trademark Registration",
-    "GST Registration",
-    "LLP Registration",
-    "Startup India Registration",
-    "MSME Registration",
-    "ISO 9001:2015",
-    "Close Company",
-    "DIN KYC",
-    "Annual Filings of Companies",
-    "Resignation of Director",
-    "Trademark Objection",
+    {
+      name: "Private Limited Company Registration",
+      link: "/privateLimitedComapny"
+    },
+    {
+      name: "Trademark Registration",
+      link: "/trademarkRegistration"
+    },
+    {
+      name: "GST Registration",
+      link: "/GSTRegistration"
+    },
+    {
+      name: "Startup India Registration",
+      link: "/StartupIndia"
+    },
+    {
+      name: "Close Company",
+      link: "/windingUpCompany"
+    },
+    {
+      name: "DIN KYC",
+      link: "/DINeKYCFiling"
+    },
+    {
+      name: "Trademark Objection",
+      link: "/trademarkObjection"
+    },
+    {
+      name: "KYC Updation",
+      link: "/KYCUpdation"
+    },
+    {
+      name: "Transmission of Shares",
+      link: "/TransmissionOfShares"
+    },
+    {
+      name: "Name Deletion in Shares",
+      link: "/NameDeletion"
+    },
+    {
+      name: "IEPF (Investor Education and Protection Fund)",
+      link: "/IEPF"
+    },
+    {
+      name: "Section 8/NGO",
+      link: "/section8Company"
+    }
   ]
 
 
@@ -80,84 +117,84 @@ function Herosection() {
       {urlName ? (
         <>
 
-<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-16 text-center lg:pt-32">
-  {/* Welcome Section */}
-  <p className="mx-auto -mt-4 max-w-2xl text-lg tracking-tight text-slate-700 sm:mt-6">
-    Welcome to
-    <span className="border-b border-dotted border-slate-300">{heroContent?.subtitle || "XYZ"}</span>
-  </p>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-16 text-center lg:pt-32">
+            {/* Welcome Section */}
+            <p className="mx-auto -mt-4 max-w-2xl text-lg tracking-tight text-slate-700 sm:mt-6">
+              Welcome to
+              <span className="border-b border-dotted border-slate-300">{heroContent?.subtitle || "XYZ"}</span>
+            </p>
 
-  {/* Dynamic Title */}
-  <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
-  <span className="inline-block">
-    {/* Extract the first word */}
-    {heroContent?.title?.split(" ")[0] || "Effortless"}{" "}
-    <span className="relative whitespace-nowrap text-blue-600">
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 418 42"
-        className="absolute top-2/3 left-0 h-[0.58em] w-full fill-blue-300/70"
-        preserveAspectRatio="none"
-      >
-        <path d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946..." />
-      </svg>
-      <span className="relative">
-        {/* Highlight the second word or fallback */}
-        {heroContent?.highlight || heroContent?.title?.split(" ")[1]}
-      </span>
-    </span>
-  </span>
-  <span className="inline-block">
-    {/* Extract remaining words excluding the first word */}
-    {heroContent?.title
-      ?.split(" ")
-      .slice(2)
-      .join(" ") || "Tax Filing Services"}
-  </span>
-</h1>
+            {/* Dynamic Title */}
+            <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
+              <span className="inline-block">
+                {/* Extract the first word */}
+                {heroContent?.title?.split(" ")[0] || "Effortless"}{" "}
+                <span className="relative whitespace-nowrap text-blue-600">
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 418 42"
+                    className="absolute top-2/3 left-0 h-[0.58em] w-full fill-blue-300/70"
+                    preserveAspectRatio="none"
+                  >
+                    <path d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946..." />
+                  </svg>
+                  <span className="relative">
+                    {/* Highlight the second word or fallback */}
+                    {heroContent?.highlight || heroContent?.title?.split(" ")[1]}
+                  </span>
+                </span>
+              </span>
+              <span className="inline-block">
+                {/* Extract remaining words excluding the first word */}
+                {heroContent?.title
+                  ?.split(" ")
+                  .slice(2)
+                  .join(" ") || "Tax Filing Services"}
+              </span>
+            </h1>
 
 
-  {/* Dynamic Description */}
-  <p className="mx-auto mt-9 max-w-2xl text-lg tracking-tight text-slate-700 sm:mt-6">
-    {heroContent?.description?.length > 0 ? (
-      heroContent.description.map((item, index) => (
-        <span key={index} className="block">
-          {item}
-        </span>
-      ))
-    ) : (
-      <span>
-        Simplify your tax filing, GST, and compliance with our expert solutions.
-      </span>
-    )}
-  </p>
+            {/* Dynamic Description */}
+            <p className="mx-auto mt-9 max-w-2xl text-lg tracking-tight text-slate-700 sm:mt-6">
+              {heroContent?.description?.length > 0 ? (
+                heroContent.description.map((item, index) => (
+                  <span key={index} className="block">
+                    {item}
+                  </span>
+                ))
+              ) : (
+                <span>
+                  Simplify your tax filing, GST, and compliance with our expert solutions.
+                </span>
+              )}
+            </p>
 
-  {/* Buttons */}
-  <div className="mt-12 flex flex-col justify-center gap-y-5 sm:mt-10 sm:flex-row sm:gap-y-0 sm:gap-x-6">
-    <button className="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900 animate-fade-in-left">
-      <svg
-        stroke="currentColor"
-        fill="currentColor"
-        strokeWidth="0"
-        role="img"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-        className="h-3 w-3 flex-none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M8.824 7.287c.008 0..." />
-      </svg>
-      <span className="ml-3">Learn More</span>
-    </button>
+            {/* Buttons */}
+            <div className="mt-12 flex flex-col justify-center gap-y-5 sm:mt-10 sm:flex-row sm:gap-y-0 sm:gap-x-6">
+              <button className="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900 animate-fade-in-left">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  strokeWidth="0"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  className="h-3 w-3 flex-none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M8.824 7.287c.008 0..." />
+                </svg>
+                <span className="ml-3">Learn More</span>
+              </button>
 
-    <Link
-      to={`/contact`}
-      className="group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none ring-slate-200 text-slate-700 hover:text-slate-900 hover:ring-slate-300 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300 animate-fade-in-right"
-    >
-      Contact Us
-    </Link>
-  </div>
-</div>
+              <Link
+                to={`/contact`}
+                className="group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none ring-slate-200 text-slate-700 hover:text-slate-900 hover:ring-slate-300 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300 animate-fade-in-right"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
 
         </>
 
@@ -220,12 +257,14 @@ function Herosection() {
                 </h3>
                 <div className="flex flex-wrap  w-full lg:w-[80%] justify-center items-center gap-4 mx-auto">
                   {topSearches.map((item, index) => (
-                    <span
-                      key={index}
-                      className="bg-white text-gray-700 px-2 lg:px-4 py-2 rounded-full shadow-md text-sm cursor-pointer hover:bg-blue-100 hover:text-blue-700 transition-all duration-300"
-                    >
-                      {item}
-                    </span>
+                    <Link to={item.link}>
+                      <span
+                        key={index}
+                        className="bg-white text-gray-700 px-2 lg:px-4 py-2 rounded-full shadow-md text-sm cursor-pointer hover:bg-blue-100 hover:text-blue-700 transition-all duration-300"
+                      >
+                        {item.name}
+                      </span>
+                    </Link>
                   ))}
                 </div>
               </div>
