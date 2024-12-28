@@ -234,16 +234,16 @@ function Herosection() {
                 {showSuggetion?.length > 0 && (
                   <ul className="absolute z-10 w-full bg-white border border-gray-200 rounded-lg shadow-lg mt-2 max-h-60 overflow-auto">
                     {showSuggetion.map((item, index) => (
-                      <li className='px-4 py-2 hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-colors duration-200"'>
-                        <Link
-                          to={item.link}
-                          key={index}
-                          value={item}
-                          className=""
-                        >
+                      <Link
+                        to={item.link}
+                        key={index}
+                        value={item}
+                        className=""
+                      >
+                        <li className='px-4 py-2 hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-colors duration-200"'>
                           {item.title}
-                        </Link>
-                      </li>
+                        </li>
+                      </Link>
                     ))}
                   </ul>
                 )}
