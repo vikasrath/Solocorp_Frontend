@@ -97,7 +97,6 @@ function Herosection() {
 
 
   useEffect(() => {
-    console.log(urlName);
 
     if (urlName) {
       if (pageData) {
@@ -256,7 +255,7 @@ function Herosection() {
                 </h3>
                 <div className="flex flex-wrap  w-full lg:w-[80%] justify-center items-center gap-4 mx-auto">
                   {topSearches.map((item, index) => (
-                    <Link to={item.link}>
+                    <Link to={item.link} key={index}>
                       <span
                         key={index}
                         className="bg-white text-gray-700 px-2 lg:px-4 py-2 rounded-full shadow-md text-sm cursor-pointer hover:bg-blue-100 hover:text-blue-700 transition-all duration-300"

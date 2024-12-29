@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle,FaPlus  } from "react-icons/fa";
 
 function Requirements({ content }) {
   const [openIndex, setOpenIndex] = useState(null);

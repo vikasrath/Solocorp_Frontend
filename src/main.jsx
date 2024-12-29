@@ -1,16 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import { BrowserRouter } from 'react-router-dom'
-import { PageDataProvider } from './context/pageData.jsx'
+import { StrictMode } from 'react';
+import { hydrateRoot } from 'react-dom/client';  // Use hydrateRoot for SSR
+import App from './App.jsx';
+import './index.css';
+import { BrowserRouter } from 'react-router-dom';
+import { PageDataProvider } from './context/pageData.jsx';
 
-createRoot(document.getElementById('root')).render(
+// Hydrate the React app on the client side with SSR-rendered HTML
+hydrateRoot(document.getElementById('root'), (
   <StrictMode>
     <PageDataProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
     </PageDataProvider>
-  </StrictMode>,
-)
+  </StrictMode>
+));
